@@ -1,0 +1,28 @@
+{
+    "name": "kl/categorytype",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*",
+        "magento/core": "1.9.1.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "2.0.10.1"
+    },
+    "authors": [
+        {
+            "name": "Andreas Karlsson",
+            "email": "andreas@karlssonlord.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://packages.firegento.com"
+        }
+    ],
+    "extra":{
+        "auto-append-gitignore": true,
+        "magento-root-dir": "src",
+        "magento-deploystrategy": "symlink",
+        "magento-force": true
+    }
+}

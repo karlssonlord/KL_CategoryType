@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <KL_CategoryType>
+            <version>0.0.1</version>
+        </KL_CategoryType>
+    </modules>
+    <global>
+        <blocks>
+            <categorytype>
+                <class>KL_CategoryType_Block</class>
+            </categorytype>
+        </blocks>
+        <helpers>
+            <categorytype>
+                <class>KL_CategoryType_Helper</class>
+            </categorytype>
+        </helpers>
+        <models>
+            <categorytype>
+                <class>KL_CategoryType_Model</class>
+            </categorytype>
+        </models>
+    </global>
+</config>

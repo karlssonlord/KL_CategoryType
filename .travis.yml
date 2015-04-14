@@ -1,0 +1,26 @@
+language: php
+php:
+  - 5.4
+
+env:
+  - DB=mysql
+
+cache:
+  directories:
+    - vendor/
+
+before_install:
+  - mysql -uroot -h localhost -e "USE mysql; UPDATE user SET password=PASSWORD('topsecret') WHERE user='root'; FLUSH PRIVILEGES;"
+
+install:
+  - rm -rf vendor/magento
+  - composer install --no-interaction --no-ansi
+  - sleep 1
+  - chmod a+x install.sh
+  - ./install.sh
+
+script:
+  - vendor/bin/codecept run
+  - rm -rf vendor/magento
+  - rm -rf vendor/autoload.php
+  - rm -rf vendor/composer/autoload_classmap.php
