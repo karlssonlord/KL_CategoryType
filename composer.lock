@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a3c6c390c1b79307d01d862a6f1ceabc",
+    "hash": "c51cabca36ff78d32dd709ed1c8bd61a",
     "packages": [
         {
             "name": "eloquent/composer-config-reader",
@@ -323,16 +323,16 @@
         },
         {
             "name": "magento-hackathon/magento-composer-installer",
-            "version": "3.0.2",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cotya/magento-composer-installer.git",
-                "reference": "1a15c8a83c61c487580ef63da820f4a90030e095"
+                "reference": "32a1048626880b181906fddb70f0bac1bab97a65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cotya/magento-composer-installer/zipball/1a15c8a83c61c487580ef63da820f4a90030e095",
-                "reference": "1a15c8a83c61c487580ef63da820f4a90030e095",
+                "url": "https://api.github.com/repos/Cotya/magento-composer-installer/zipball/32a1048626880b181906fddb70f0bac1bab97a65",
+                "reference": "32a1048626880b181906fddb70f0bac1bab97a65",
                 "shasum": ""
             },
             "archive": {
@@ -343,34 +343,33 @@
             },
             "require": {
                 "composer-plugin-api": "1.0.0",
-                "eloquent/composer-config-reader": "2.*",
-                "php": ">=5.3.2",
-                "symfony/console": "~2.5"
+                "eloquent/composer-config-reader": "2.*"
             },
             "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "cotya/composer-test-framework": "dev-master",
-                "mikey179/vfsstream": "~1.4",
-                "phpunit/phpunit": "~4.3",
-                "phpunit/phpunit-mock-objects": "~2.3",
-                "squizlabs/php_codesniffer": "~2.1",
-                "symfony/process": "~2.5"
+                "composer/composer": "*@dev",
+                "firegento/phpcs": "1.1.0",
+                "mikey179/vfsstream": "*",
+                "phpunit/phpunit": "*",
+                "phpunit/phpunit-mock-objects": "dev-master",
+                "squizlabs/php_codesniffer": "1.4.7",
+                "symfony/process": "*"
             },
             "suggest": {
                 "colinmollenhour/modman": "*",
-                "ext-SPL_Types": "*",
-                "theseer/autoload": "~1.14"
+                "magento-hackathon/composer-command-integrator": "*",
+                "theseer/autoload": "~1.14",
+                "zetacomponents/console-tools": "dev-master"
             },
-            "bin": [
-                "bin/magento-composer-installer.php"
-            ],
             "type": "composer-plugin",
             "extra": {
+                "composer-command-registry": [
+                    "MagentoHackathon\\Composer\\Magento\\Command\\DeployCommand"
+                ],
                 "class": "MagentoHackathon\\Composer\\Magento\\Plugin"
             },
             "autoload": {
                 "psr-0": {
-                    "MagentoHackathon\\Composer": "src/"
+                    "MagentoHackathon\\Composer\\Magento": "src/"
                 }
             },
             "autoload-dev": {
@@ -414,10 +413,10 @@
                 "magento"
             ],
             "support": {
-                "source": "https://github.com/Cotya/magento-composer-installer/tree/3.0",
+                "source": "https://github.com/Cotya/magento-composer-installer/tree/2.1.1",
                 "issues": "https://github.com/Cotya/magento-composer-installer/issues"
             },
-            "time": "2015-03-28 19:40:14"
+            "time": "2014-12-11 23:43:53"
         },
         {
             "name": "magento/core",
@@ -528,64 +527,6 @@
                 "issues": "https://github.com/bragento/magento-core/issues"
             },
             "time": "2014-12-17 18:09:33"
-        },
-        {
-            "name": "symfony/console",
-            "version": "v2.6.6",
-            "target-dir": "Symfony/Component/Console",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Console.git",
-                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/5b91dc4ed5eb08553f57f6df04c4730a73992667",
-                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/event-dispatcher": "~2.1",
-                "symfony/phpunit-bridge": "~2.7",
-                "symfony/process": "~2.1"
-            },
-            "suggest": {
-                "psr/log": "For using the console logger",
-                "symfony/event-dispatcher": "",
-                "symfony/process": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Console\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony Console Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-03-30 15:54:10"
         }
     ],
     "packages-dev": [
@@ -1763,6 +1704,64 @@
             "description": "Symfony BrowserKit Component",
             "homepage": "http://symfony.com",
             "time": "2014-12-02 20:19:20"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.6.6",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/5b91dc4ed5eb08553f57f6df04c4730a73992667",
+                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.1",
+                "symfony/phpunit-bridge": "~2.7",
+                "symfony/process": "~2.1"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-03-30 15:54:10"
         },
         {
             "name": "symfony/css-selector",

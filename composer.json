@@ -1,7 +1,7 @@
 {
     "name": "kl/categorytype",
     "require": {
-        "magento-hackathon/magento-composer-installer": "*",
+        "magento-hackathon/magento-composer-installer": "2.1.1",
         "magento/core": "1.9.1.0"
     },
     "require-dev": {
