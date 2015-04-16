@@ -21,5 +21,32 @@
                 <class>KL_CategoryType_Model</class>
             </categorytype>
         </models>
+        <resources>
+            <kl_categorytype_setup>
+                <setup>
+                    <module>KL_CategoryType</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+            </kl_categorytype_setup>
+        </resources>
+        <events>
+            <catalog_category_save_after>
+                <observers>
+                    <categorytype>
+                        <class>categorytype/observer</class>
+                        <method>setCustomLayoutUpdate</method>
+                    </categorytype>
+                </observers>
+            </catalog_category_save_after>
+        </events>
     </global>
+    <default>
+        <categorytype>
+            <types>
+                <standard>
+                    <name>Standard</name>
+                </standard>
+            </types>
+        </categorytype>
+    </default>
 </config>
