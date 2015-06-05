@@ -209,7 +209,7 @@ class KL_CategoryType_Model_Observer
              * Finally, save the value to the category
              */
             $category->setCustomLayoutUpdate($customLayoutUpdate);
-            $category->save();
+            #$category->save();
         }
 
         return $this;
