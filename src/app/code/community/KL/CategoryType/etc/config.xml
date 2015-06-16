@@ -30,14 +30,14 @@
             </kl_categorytype_setup>
         </resources>
         <events>
-            <catalog_category_save_after>
+            <catalog_category_save_before>
                 <observers>
                     <categorytype>
                         <class>categorytype/observer</class>
                         <method>setCustomLayoutUpdate</method>
                     </categorytype>
                 </observers>
-            </catalog_category_save_after>
+            </catalog_category_save_before>
         </events>
     </global>
     <default>
